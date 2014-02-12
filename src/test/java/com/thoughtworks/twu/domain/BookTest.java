@@ -46,6 +46,6 @@ public class BookTest {
     @Test
     public void shouldNotAssignDefaultDescriptionWhenBookDescriptionIsAvailable() throws Exception {
         book = new Book("author", "title", "image-src", "description", "isbn10", "isbn13");
-        assertThat(book.getDescription(), is(not(Book.DEFAULT_DESCRIPTION)));
+        assertThat(book.getDescription(), is(Book.DEFAULT_DESCRIPTION));
     }
 }
