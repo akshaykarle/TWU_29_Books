@@ -24,9 +24,6 @@ public class AddBookControllerTest {
 
     @Test
     public void shouldAddBookToDBIfNotInSystem(){
-        if (true) {
-            throw new EmptyStackException();
-        }
         Book book = arrangeBookID();
         when(bookService.isBookFromResultsListInDB(book)).thenReturn(false);
         addBookController.addBook(book.getAuthor(), book.getTitle(), book.getImage(), book.getDescription(), book.getISBN10(), book.getISBN13());
